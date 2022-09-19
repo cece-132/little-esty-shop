@@ -1,0 +1,5 @@
+<%= form_with url: path, method: method, local: true do |f| %>
+  <%= f.label :status, "Status:"%>
+  <%= f.select :status, options_for_select(["Pending", "Packaged", "Shipped"]), class: 'form-control' %>
+  <%= f.submit button_text %>
+<% end %>

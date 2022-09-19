@@ -14,6 +14,11 @@ class Customer < ApplicationRecord
       .limit(5)
   end
 
+  def full_name
+    name = [first_name, last_name]
+    name.join(" ")
+  end
+
   def self.top_five_overall_cust
     Customer.select("customers.*", "count(transactions.*) as transac_count")
     .joins(invoices: :transactions)
@@ -22,5 +27,6 @@ class Customer < ApplicationRecord
     .order("transac_count DESC")
     .limit(5)
   end
+
 
 end

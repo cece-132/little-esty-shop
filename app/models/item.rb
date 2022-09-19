@@ -37,5 +37,4 @@ class Item < ApplicationRecord
     .first
     .created_at
   end
-
 end

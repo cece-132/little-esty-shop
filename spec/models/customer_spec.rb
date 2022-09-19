@@ -156,4 +156,14 @@ RSpec.describe Customer, type: :model do
       expect(Customer.top_five_overall_cust).to eq([customers[0], customers[1], customers[2], customers[3], customers[4]])
     end
   end
+
+  describe 'Instance Methods' do
+    describe 'full_name' do
+      it "combines the customers first and last name" do
+        @customer = create(:customer)   
+
+        expect(@customer.full_name).to eq "#{@customer.first_name} #{@customer.last_name}"
+      end
+    end
+  end
 end
