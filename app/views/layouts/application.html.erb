@@ -16,12 +16,12 @@
       </div>
     <% end %>
     <%= yield %>
-    <p> Repo Name: <%= @github_info[:repo_name] %> </p>
-    <% @github_info[:teammates].each do |teammate| %>
-      <p> <%= teammate.username %> </p>
-      <p> <%= teammate.commits %> </p>
-      <%end%>
-    <p> Pull Request Count: <%=@github_info[:pull_request_count]%> </p>
+    <%# <p> Repo Name: <%= @github_info[:repo_name] %> </p> %>
+    <%# <% @github_info[:teammates].each do |teammate| %> %>
+      <%# <p> <%= teammate.username %> </p> %>
+      <%# <p> <%= teammate.commits %> </p> %>
+      <%# <%end%> %>
+    <%# <p> Pull Request Count: <%=@github_info[:pull_request_count]%> </p> %>
   </body>
 
 </html>
