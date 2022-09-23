@@ -1,9 +1,9 @@
 class Teammate
-  attr_reader :username,
-              :commits
+  # attr_reader :username,
+  #             :commits
 
-  def initialize(data)
-    @username = data[:login]
-    @commits = data[:contributions]
-  end
+  # def initialize(data)
+  #   @username = data[:login]
+  #   @commits = data[:contributions]
+  # end
 end
